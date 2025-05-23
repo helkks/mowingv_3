@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Clarksville TN Lawn Care & Landscaping | C&amp;K Landscaping</title>
+  <link rel="icon" href="CK Mowing-11.png" type="image/png" />
+  <meta name="description" content="C&amp;K Landscaping – professional lawn mowing, edging, and trimming services in Clarksville, Tennessee. Call 931-591-0877 for a free quote!" />
+  <meta name="keywords" content="Clarksville TN lawn care, lawn mowing Clarksville, landscaping Clarksville TN, C&K Landscaping" />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Clarksville TN Lawn Care & Landscaping | C&amp;K Landscaping" />
+  <meta property="og:description" content="Expert lawn mowing, edging & trimming in Clarksville, Tennessee. Call 931-591-0877 today!" />
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandscapingBusiness",
+    "name": "C&K Landscaping",
+    "image": "https://yourdomain.com/logo.png",
+    "telephone": "931-591-0877",
+    "email": "ckmowingtn@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main St",
+      "addressLocality": "Clarksville",
+      "addressRegion": "TN",
+      "postalCode": "37040",
+      "addressCountry": "US"
+    },
+    "areaServed": "Clarksville, TN",
+    "url": "https://yourdomain.com/"
+  }
+  </script>
+</head>
+<body class="antialiased text-gray-800">
+  <main>
+    <!-- Header & Navigation -->
+    <header class="bg-gray-100 py-4 relative">
+      <img src="CK Mowing-11.png" alt="C&K Landscaping logo" loading="lazy" class="absolute left-4 top-1/2 transform -translate-y-1/2 h-10" />
+      <nav class="container mx-auto flex justify-center md:justify-end space-x-6">
+        <a href="#gallery" class="font-semibold hover:text-green-600">Gallery</a>
+        <a href="#services" class="font-semibold hover:text-green-600">Services</a>
+        <a href="#contact" class="font-semibold hover:text-green-600">Contact</a>
+        <a href="#about" class="font-semibold hover:text-green-600">About</a>
+      </nav>
+    </header>
+
+    <!-- Page Title -->
+    <h1 class="text-3xl text-center mt-8">Clarksville TN Lawn Care & Landscaping</h1>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container mx-auto py-8">
+      <h2 class="text-2xl text-center mb-4">Our Work Gallery</h2>
+      <div class="relative">
+        <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">&larr;</button>
+        <div id="gallery-slider" class="flex overflow-hidden">
+          <!-- Images will be inserted here -->
+        </div>
+        <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">&rarr;</button>
+      </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const images = [
+          '20858105183281531.jpg',
+          '1784967398567658970.jpg',
+          '941164330130684084.jpg',
+          '1685598783102633360.jpg'
+        ];
+        let currentIndex = 0;
+        const slider = document.getElementById('gallery-slider');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        function updateGallery() {
+          slider.innerHTML = '';
+          for (let i = 0; i < 2; i++) {
+            const img = document.createElement('img');
+            const idx = (currentIndex + i) % images.length;
+            img.src = images[idx];
+            img.alt = `Gallery image ${idx + 1}`;
+            img.className = 'w-1/2 object-cover';
+            img.loading = 'lazy';
+            slider.appendChild(img);
+          }
+        }
+        prev.addEventListener('click', () => {
+          currentIndex = (currentIndex - 2 + images.length) % images.length;
+          updateGallery();
+        });
+        next.addEventListener('click', () => {
+          currentIndex = (currentIndex + 2) % images.length;
+          updateGallery();
+        });
+        updateGallery();
+      });
+    </script>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto py-8">
+      <h2 class="text-2xl text-center mb-6">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white border border-gray-200 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">0.25 Acre Lawn</h3>
+          <ul class="list-disc list-inside mb-2">
+            <li>Mowing</li>
+            <li>Weedwacking</li>
+            <li>Edging &amp; Trimming</li>
+          </ul>
+          <p class="font-bold mb-2">$50</p>
+          <p class="italic text-gray-600">Most residential houses have this 0.25 acre yard.</p>
+        </div>
+        <div class="bg-white border border-gray-200 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">0.50 Acre Lawn</h3>
+          <ul class="list-disc list-inside mb-2">
+            <li>Mowing</li>
+            <li>Weedwacking</li>
+            <li>Edging &amp; Trimming</li>
+          </ul>
+          <p class="font-bold">$70</p>
+        </div>
+        <div class="bg-white border border-gray-200 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">0.75 Acre Lawn</h3>
+          <ul class="list-disc list-inside mb-2">
+            <li>Mowing</li>
+            <li>Weedwacking</li>
+            <li>Edging &amp; Trimming</li>
+          </ul>
+          <p class="font-bold">$90</p>
+        </div>
+        <div class="bg-white border border-gray-200 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">1.00 Acre Lawn</h3>
+          <ul class="list-disc list-inside mb-2">
+            <li>Mowing</li>
+            <li>Weedwacking</li>
+            <li>Edging &amp; Trimming</li>
+          </ul>
+          <p class="font-bold">$110</p>
+        </div>
+      </div>
+      <p class="text-center text-red-600 mt-4">If a yard is overgrown, there is a $10 fee; after we cut, the rate returns to normal.</p>
+      <p class="italic text-center text-gray-600 mt-6">Lawns over 1.00 acre require a site survey before service.</p>
+      <p class="text-center font-semibold mt-2">To schedule our lawn care services, call, text, or email us using the contacts below.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-8">
+      <h2 class="text-2xl text-center mb-4">Contact Us</h2>
+      <p class="text-center mb-2">
+        Call us at <a href="tel:9315910877" class="text-green-600 font-semibold">931-591-0877</a>
+        or email <a href="mailto:ckmowingtn@gmail.com" class="text-green-600 font-semibold">ckmowingtn@gmail.com</a>
+      </p>
+      <p class="text-center">We accept <span class="font-semibold">Cash &amp; Cash App</span> payments.</p>
+      <div class="mt-4">
+        <iframe src="https://www.google.com/maps?q=Clarksville,+TN&output=embed" loading="lazy" class="w-full h-64 border-0"></iframe>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-8">
+      <h2 class="text-2xl text-center mb-4">About C&amp;K</h2>
+      <p class="text-center max-w-2xl mx-auto">We are high school students in Clarksville, Tennessee uplifting our community through quality landscaping and lawn care.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <p class="text-center text-sm">&copy; 2025 C&amp;K Landscaping. All rights reserved.</p>
+    <p class="text-center text-xs">123 Main St, Clarksville, TN 37040 | 931-591-0877</p>
+  </footer>
+</body>
+</html>
